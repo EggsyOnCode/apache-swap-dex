@@ -137,4 +137,10 @@ contract ApacheSwapPair is ERC20, ReentrancyGuard, Ownable {
             revert TransferFailed();
         }
     }
+
+    // getters
+
+    function getReserves() public view returns (uint256, uint256) {
+        return (s_reserve0, s_reserve1);
+    }
 }

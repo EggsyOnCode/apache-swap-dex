@@ -28,4 +28,5 @@ interface IApacheSwapPair {
     function mint(address to) external returns (uint256 liq);
     function burn(address to) external returns (uint256 amount0, uint256 amount1);
     function swap(uint256 amount0Out, uint256 amount1Out, address to) external;
+    function getReserves() external view returns (uint256 reserve0, uint256 reserve1);
 }
